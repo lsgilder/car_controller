@@ -9,5 +9,6 @@ class Control:
         self.port = port
         self.s = serial.Serial(port, 9600)
 
+    #encodes the message to a bitstring for the bluetooth module
     def send(self, data):
         self.s.write(str.encode(str(data)))
